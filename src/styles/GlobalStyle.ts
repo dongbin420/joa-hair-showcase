@@ -37,6 +37,10 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     background-color: ${(props) => props.theme.color.orange50};
   }
+
+  button {
+  all: unset; /* 모든 기본 스타일 초기화 */
+}
 `;
 
 export default GlobalStyle;

@@ -6,9 +6,9 @@ import ReviewCarousel from '@/components/ReviewCarousel/ReviewCarousel';
 import mainImg from '@/assets/imgs/webp/mainImg.webp';
 import introImg from '@/assets/imgs/webp/introImg.webp';
 import { INTRO_TEXT } from '@/constants/text';
-import { RESERVATION_URL } from './../../constants/url';
 import { useFetchSelectedPosts } from '@/hooks/useFetchSelectedPosts';
 import { reviews } from '@/constants/reviewData';
+import { Link } from 'react-router-dom';
 
 function MainPage() {
   return (
@@ -88,10 +88,12 @@ function MainPage() {
           </ReviewCarousel>
         </S.ReviewCarouselContainer>
       </S.FourthSection>
-      <S.ButtonLink href={RESERVATION_URL} target="_blank">
-        <Button size={'xxLarge'} customCss={S.ButtonCustomCss}>
-          BOOK NOW
-        </Button>
+      <S.ButtonLink>
+        <Link to="/booking">
+          <Button size={'xxLarge'} customCss={S.ButtonCustomCss}>
+            BOOK NOW
+          </Button>
+        </Link>
       </S.ButtonLink>
     </S.MainPageContainer>
   );

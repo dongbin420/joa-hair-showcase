@@ -79,4 +79,4 @@ export const ButtonCustomCss = css`
   }
 `;
 
-export const ButtonLink = styled.a``;
+export const ButtonLink = styled.div``;

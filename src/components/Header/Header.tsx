@@ -8,7 +8,7 @@ import Overlay from '@/components/Overlay/Overlay';
 import instagram from '@/assets/imgs/png/instagram.png';
 import facebook from '@/assets/imgs/png/facebook.png';
 import hamburgerIcon from '@/assets/imgs/svg/hamburger.svg';
-import { INSTAGRAM_URL, FACEBOOK_URL, RESERVATION_URL } from '@/constants/url';
+import { INSTAGRAM_URL, FACEBOOK_URL } from '@/constants/url';
 import { ROUTES } from '@/constants/routes';
 
 function Header() {
@@ -38,10 +38,12 @@ function Header() {
           <S.IconLink href={FACEBOOK_URL} target="_blank">
             <S.Icon src={facebook} alt="facebook icon" isSticky={isSticky} />
           </S.IconLink>
-          <S.ButtonLink href={RESERVATION_URL} target="_blank">
-            <Button size={'large'} customCss={S.ButtonCustomCss} isSticky={isSticky}>
-              BOOK NOW
-            </Button>
+          <S.ButtonLink>
+            <Link to="/booking">
+              <Button size={'large'} customCss={S.ButtonCustomCss} isSticky={isSticky}>
+                BOOK NOW
+              </Button>
+            </Link>
           </S.ButtonLink>
         </S.HeaderSecond>
         <ImgWrapper

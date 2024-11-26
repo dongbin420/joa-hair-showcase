@@ -88,7 +88,7 @@ export const CloseCustomCss = {
   `,
 };
 
-export const ButtonLink = styled.a``;
+export const ButtonLink = styled.div``;
 
 export const ButtonCustomCss = css`
   margin-bottom: ${({ theme }) => theme.spacing.spacing8};
