@@ -1,45 +1,46 @@
 import * as S from './Booking.styles';
-import Accordion from '@/components/Accordion/Accordion';
-import ServiceDetails from './ServiceDetails/ServiceDetails';
-import { BOOKING_SERVICES } from '@/constants/bookingData';
+import ServiceSelection from './ServiceSelection/ServiceSelection';
+import DateTimeSelection from './DateTimeSelection/DateTimeSelection';
+import BookingSummary from './BookingSummary/BookingSummary';
+import { useState } from 'react';
+import { BookingFormData } from '@/types/bookingType';
+import useBookingForm from '@/hooks/useBookingForm';
 
 function Booking() {
+  const { register, handleSubmit, watch, addService, removeService } = useBookingForm();
+  const selectedServices = watch('selectedServices');
+  const [activeStep, setActiveStep] = useState(1);
+
+  const onSubmit = (data: BookingFormData) => {
+    // 서버로 폼 데이터 전송 로직
+    console.log(data);
+  };
+
+  const handleNextStep = () => {
+    if (activeStep < 3) {
+      setActiveStep((prev) => prev + 1);
+    }
+  };
+
+  const handleBackStep = () => {
+    if (activeStep > 1) {
+      setActiveStep((prev) => prev - 1);
+    }
+  };
+
   return (
-    <S.BookingContainer>
-      <S.SelectionSection>
-        <S.SelectionTitleWrapper>
-          <S.SelectionNum>1</S.SelectionNum>
-          <S.SelectionTitle>Choose Your Services</S.SelectionTitle>
-        </S.SelectionTitleWrapper>
-        <S.SelectionContentWrapper>
-          <Accordion>
-            {BOOKING_SERVICES.map((question, questionIdx) => (
-              <Accordion.Item key={questionIdx}>
-                <Accordion.Header idx={questionIdx}>{question.question}</Accordion.Header>
-                <Accordion.Body idx={questionIdx}>
-                  <ServiceDetails details={question.answer} />
-                </Accordion.Body>
-              </Accordion.Item>
-            ))}
-          </Accordion>
-        </S.SelectionContentWrapper>
-      </S.SelectionSection>
-
-      <S.SelectionSection>
-        <S.SelectionTitleWrapper>
-          <S.SelectionNum>2</S.SelectionNum>
-          <S.SelectionTitle>Choose Date & Time</S.SelectionTitle>
-        </S.SelectionTitleWrapper>
-        <S.SelectionContentWrapper></S.SelectionContentWrapper>
-      </S.SelectionSection>
-
-      <S.SelectionSection>
-        <S.SelectionTitleWrapper>
-          <S.SelectionNum>3</S.SelectionNum>
-          <S.SelectionTitle>Booking Summary</S.SelectionTitle>
-        </S.SelectionTitleWrapper>
-      </S.SelectionSection>
-      <S.SelectionContentWrapper noneBorder={true}></S.SelectionContentWrapper>
+    //(12/6) 후에, e전달해서, onSubmit 함수에서 preventDefault 적용하기(그러면, 아코디언 내 버튼 굳이 type 지정할 필요 없음)
+    <S.BookingContainer onSubmit={() => handleSubmit(onSubmit)}>
+      <ServiceSelection
+        isActive={activeStep === 1}
+        onNext={handleNextStep}
+        selectedServices={selectedServices}
+        addService={addService}
+        removeService={removeService}
+      />
+      <DateTimeSelection isActive={activeStep === 2} onNext={handleNextStep} />
+      <BookingSummary />
+      <button type="submit">test</button>
     </S.BookingContainer>
   );
 }

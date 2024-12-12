@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   button {
-  all: unset; /* 모든 기본 스타일 초기화 */
+  all: unset; 
 }
 `;
 

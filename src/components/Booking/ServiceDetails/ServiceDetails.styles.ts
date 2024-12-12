@@ -32,21 +32,62 @@ export const ServiceTime = styled.p`
 
 export const ServiceSelectWrapper = styled.div``;
 
-export const ServiceSelectButton = styled.button`
+export const ServiceSelectButton = styled.button<{ isSelected: boolean }>`
+  position: relative;
   background-color: white;
   padding: ${({ theme }) => theme.spacing.spacing2} ${({ theme }) => theme.spacing.spacing4};
   color: #1976d2;
   border-radius: 0 5px 5px 0;
-  border: 0.5px solid #1976d2;
+  border: 0.5px solid ${({ isSelected, theme }) => (isSelected ? theme.color.gray300 : '#1976d2')};
+  cursor: ${({ isSelected }) => (isSelected ? 'auto' : 'pointer')};
+
+  /* 호버 상태 */
+  &:hover {
+    background-color: ${({ isSelected }) => (isSelected ? 'white' : '#BBDEFB')};
+    color: ${({ isSelected, theme }) => (isSelected ? theme.color.gray300 : '#1976d2')};
+  }
+
+  /* 클릭 상태 */
+  &:active {
+    background-color: ${({ isSelected }) => (isSelected ? 'white' : '#90CAF9')};
+  }
 `;
 
-export const ServiceDeleteButton = styled.button`
+export const Badge = styled.div<{ isSelected: boolean }>`
+  position: absolute;
+  top: -8px; /* 버튼 오른쪽 위에 걸쳐서 위치 */
+  right: -8px; /* 버튼 오른쪽 위에 걸쳐서 위치 */
+  width: 20px; /* 원 크기 */
+  height: 20px;
+  background-color: #1976d2; /* 파란색 */
+  color: white; /* 숫자 색상 */
+  border-radius: 50%; /* 원 모양 */
+  display: ${({ isSelected }) => (isSelected ? 'flex' : 'none')};
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+`;
+
+export const ServiceDeleteButton = styled.button<{ isSelected: boolean }>`
   background-color: white;
   border-right: none;
   padding: ${({ theme }) => theme.spacing.spacing2} ${({ theme }) => theme.spacing.spacing4};
   color: ${({ theme }) => theme.color.gray300};
   border-radius: 5px 0 0 5px;
-  border: 0.5px solid ${({ theme }) => theme.color.gray300};
+  border: 0.5px solid ${({ isSelected, theme }) => (isSelected ? '#D32F2F' : theme.color.gray300)};
+  cursor: ${({ isSelected }) => (isSelected ? 'pointer' : 'auto')};
+
+  /* 호버 상태 */
+  &:hover {
+    background-color: ${({ isSelected }) => (isSelected ? '#FFCDD2' : 'white')};
+    color: ${({ isSelected, theme }) => (isSelected ? '#D32F2F' : theme.color.gray300)};
+  }
+
+  /* 클릭 상태 */
+  &:active {
+    background-color: ${({ isSelected }) => (isSelected ? '#EB8686' : 'white')};
+  }
 `;
 
 export const StyledMinusGray = styled(MinusGray)`
