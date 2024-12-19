@@ -9,7 +9,7 @@
   
 </div>
 
-<!-- <br>
+<br>
 
 ## 기술스택
 
@@ -30,4 +30,4 @@
 <br>
 
 ## 인프라구조
-<img src="https://github.com/user-attachments/assets/e96c9cbf-8b42-400d-8f12-73d6b7b531c4" width="850px" title="px(픽셀) 크기 설정" alt="infra structure"></img> -->
+<img src="https://github.com/user-attachments/assets/e96c9cbf-8b42-400d-8f12-73d6b7b531c4" width="850px" title="px(픽셀) 크기 설정" alt="infra structure"></img>
