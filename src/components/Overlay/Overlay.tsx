@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import * as S from './Overlay.styles';
-import ImgWrapper from '@/components/ImgWrapper/ImgWrapper';
-import Button from '@/components/Button/Button';
+import ImgWrapper from '@/components/common/ImgWrapper/ImgWrapper';
+import Button from '@/components/common/Button/Button';
 import closeIcon from '@/assets/imgs/svg/close.svg';
 import instagram from '@/assets/imgs/png/instagram.png';
 import facebook from '@/assets/imgs/png/facebook.png';

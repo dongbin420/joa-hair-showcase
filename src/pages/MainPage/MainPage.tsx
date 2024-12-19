@@ -1,6 +1,6 @@
 import * as S from './MainPage.styles';
-import ImgWrapper from '@/components/ImgWrapper/ImgWrapper';
-import Button from '@/components/Button/Button';
+import ImgWrapper from '@/components/common/ImgWrapper/ImgWrapper';
+import Button from '@/components/common/Button/Button';
 import InstagramGrid from '@/components/InstagramGrid/InstagramGrid';
 import ReviewCarousel from '@/components/ReviewCarousel/ReviewCarousel';
 import mainImg from '@/assets/imgs/webp/mainImg.webp';
@@ -38,6 +38,7 @@ function MainPage() {
           isLcp={true}
         />
       </S.FirstSection>
+
       <S.SecondSection>
         <S.IntroContentWrapper>
           <S.IntroTextWrapper>
@@ -56,6 +57,7 @@ function MainPage() {
           />
         </S.IntroContentWrapper>
       </S.SecondSection>
+
       <S.ThirdSection>
         <S.InstagramGridContainer>
           <S.InstagramGridWrapper>
@@ -68,6 +70,7 @@ function MainPage() {
           </S.InstagramGridWrapper>
         </S.InstagramGridContainer>
       </S.ThirdSection>
+
       <S.FourthSection>
         <S.ReviewCarouselContainer>
           <S.StyledQuotesUp />
@@ -88,6 +91,7 @@ function MainPage() {
           </ReviewCarousel>
         </S.ReviewCarouselContainer>
       </S.FourthSection>
+
       <S.ButtonLink href={RESERVATION_URL} target="_blank">
         <Button size={'xxLarge'} customCss={S.ButtonCustomCss}>
           BOOK NOW

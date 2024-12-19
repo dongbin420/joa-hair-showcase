@@ -1,7 +1,7 @@
 import * as S from './ServicesPage.styles';
-import PageBanner from '@/components/PageBanner/PageBanner';
-import ImgWrapper from '@/components/ImgWrapper/ImgWrapper';
-import Button from '@/components/Button/Button';
+import PageBanner from '@/components/common/PageBanner/PageBanner';
+import ImgWrapper from '@/components/common/ImgWrapper/ImgWrapper';
+import Button from '@/components/common/Button/Button';
 import PromiseBox from '@/components/PromiseBox/PromiseBox';
 import bannerImg2 from '@/assets/imgs/webp/bannerImg2.webp';
 import serviceImg1 from '@/assets/imgs/png/serviceImg1.png';

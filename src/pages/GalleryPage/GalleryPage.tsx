@@ -1,5 +1,5 @@
 import * as S from './GalleryPage.styles';
-import PageBanner from '@/components/PageBanner/PageBanner';
+import PageBanner from '@/components/common/PageBanner/PageBanner';
 import bannerImg3 from '@/assets/imgs/webp/bannerImg3.webp';
 import { GALLERY_CONTENT } from '@/constants/bannerContent';
 import InstagramGrid from '@/components/InstagramGrid/InstagramGrid';

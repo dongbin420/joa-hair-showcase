@@ -1,5 +1,5 @@
 import * as S from './AboutPage.styles';
-import PageBanner from '@/components/PageBanner/PageBanner';
+import PageBanner from '@/components/common/PageBanner/PageBanner';
 import ImageCarousel from '@/components/ImageCarousel/ImageCarousel';
 import bannerImg1 from '@/assets/imgs/webp/bannerImg1.webp';
 import { ABOUT_CONTENT } from '@/constants/bannerContent';
