@@ -40,7 +40,7 @@ function Header() {
           description={'hamburger icon'}
         />
       </S.HeaderContainer>
-      {isOverlayOpen && <Overlay toggleOverlay={toggleOverlay} />}
+      {isOverlayOpen ? <Overlay toggleOverlay={toggleOverlay} /> : null}
     </>
   );
 }
