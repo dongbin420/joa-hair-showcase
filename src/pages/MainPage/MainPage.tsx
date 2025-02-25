@@ -11,6 +11,13 @@ import { useFetchSelectedPosts } from '@/hooks/useFetchSelectedPosts';
 import { reviews } from '@/constants/reviewData';
 
 function MainPage() {
+  const { data, status, error } = useFetchSelectedPosts();
+  const queryState = {
+    data,
+    status,
+    error,
+  };
+
   return (
     <S.MainPageContainer>
       <S.FirstSection>
@@ -63,9 +70,9 @@ function MainPage() {
           <S.InstagramGridWrapper>
             <S.InstagramGridTitle>Style Spotlights</S.InstagramGridTitle>
             <InstagramGrid
-              isMainPage={true}
-              useFetch={useFetchSelectedPosts}
+              queryState={queryState}
               customCss={S.InstagramGridCustomCss}
+              pageType="main"
             />
           </S.InstagramGridWrapper>
         </S.InstagramGridContainer>
