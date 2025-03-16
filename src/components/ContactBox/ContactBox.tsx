@@ -1,5 +1,5 @@
 import * as S from './ContactBox.styles';
-import ImgWrapper from '@/components/ImgWrapper/ImgWrapper';
+import ImgWrapper from '@/components/common/ImgWrapper/ImgWrapper';
 import locationIcon from '@/assets/imgs/svg/location.svg';
 import clockIcon from '@/assets/imgs/svg/clock.svg';
 import phoneIcon from '@/assets/imgs/svg/phone.svg';

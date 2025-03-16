@@ -1,6 +1,6 @@
 import * as S from './ContactPage.styles';
-import PageBanner from '@/components/PageBanner/PageBanner';
-import Accordion from '@/components/Accordion/Accordion';
+import PageBanner from '@/components/common/PageBanner/PageBanner';
+import Accordion from '@/components/common/Accordion/Accordion';
 import ContactBox from '@/components/ContactBox/ContactBox';
 import bannerImg4 from '@/assets/imgs/webp/bannerImg4.webp';
 import parkingImg from '@/assets/imgs/webp/parking.webp';
