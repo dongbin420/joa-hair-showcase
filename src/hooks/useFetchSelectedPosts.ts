@@ -9,5 +9,7 @@ export const useFetchSelectedPosts = () => {
       const response = await fetchSelectedPosts();
       return response.data;
     },
+    staleTime: Infinity,
+    gcTime: 1000 * 60 * 60,
   });
 };

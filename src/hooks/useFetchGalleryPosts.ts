@@ -27,5 +27,7 @@ export const useFetchGalleryPosts = () => {
 
       return undefined;
     },
+    staleTime: Infinity,
+    gcTime: 0,
   });
 };
