@@ -1,5 +1,5 @@
 import * as S from './PageBanner.styles';
-import ImgWrapper from '@/components/ImgWrapper/ImgWrapper';
+import ImgWrapper from '@/components/common/ImgWrapper/ImgWrapper';
 
 export interface PageBannerProps {
   img: string;

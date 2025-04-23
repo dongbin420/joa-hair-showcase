@@ -1,5 +1,5 @@
 import { styled, css } from 'styled-components';
-import { GradientProps } from '@/components/ImgWrapper/ImgWrapper.styles';
+import { GradientProps } from '@/components/common/ImgWrapper/ImgWrapper.styles';
 
 export const PageBannerContainer = styled.div`
   width: 100%;

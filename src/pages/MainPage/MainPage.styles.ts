@@ -1,5 +1,5 @@
 import { styled, css } from 'styled-components';
-import { GradientProps } from '@/components/ImgWrapper/ImgWrapper.styles';
+import { GradientProps } from '@/components/common/ImgWrapper/ImgWrapper.styles';
 import { QuotesUp, QuotesDown } from '@/assets/imgs/svg/index';
 
 interface IntroTextTitle {
