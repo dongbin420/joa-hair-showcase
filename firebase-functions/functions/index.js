@@ -7,7 +7,7 @@ const { onSchedule } = require('firebase-functions/v2/scheduler');
 
 initializeApp();
 const db = getFirestore();
-const MAIN_API_URL = `${process.env.INSTAGRAM_API_BASE_URL}/v20.0/${process.env.INSTAGRAM_USER_ID}/media?fields=id,media_type,media_url,permalink,timestamp,thumbnail_url,username,caption,is_shared_to_feed,children{id,media_type,media_url,thumbnail_url}&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}&pretty=1&limit=10000`;
+const MAIN_API_URL = `${process.env.INSTAGRAM_API_BASE_URL}/v20.0/${process.env.INSTAGRAM_IG_ID}/media?fields=id,media_type,media_url,permalink,timestamp,thumbnail_url,username,caption,is_shared_to_feed,children{id,media_type,media_url,thumbnail_url}&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}&pretty=1&limit=10000`;
 
 // 인스타그램 api이용해서 모든 post 가져와 firestore에 저장하는 함수(3일에 1번 자동 실행)
 exports.scheduledFetchInstaPosts = onSchedule(
